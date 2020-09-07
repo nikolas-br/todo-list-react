@@ -1,38 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
 .App {
+  max-width: 520px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  color: rgb(78, 78, 78);
+}
+
+header {
+  font-size: 3rem;
   text-align: center;
+  font-style: italic;
+  margin-bottom: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h2 {
+  background: -webkit-linear-gradient(
+    30deg,
+    rgb(97, 97, 255),
+    rgb(255, 81, 203)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  border-bottom: 1px solid rgb(180, 180, 180);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
+  height: 35px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  width: 100px;
+  text-align: center;
+  font-weight: 500;
+}
+
+nav ul li:hover {
+  border-bottom: 5px solid rgb(226, 226, 226);
+  margin-bottom: -5px;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  width: 100%;
+  font-size: 1rem;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  color: rgb(97, 97, 255);
+  font-style: italic;
+  border: 1px solid grey;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(97, 97, 255);
+  color: white;
+  font-size: 1.5rem;
+}
+
+form button:focus {
+  outline: none;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+.list {
+  margin-top: 20px;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
+}
+
+.list .item {
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 50px;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 10px;
+}
+
+.list .itemCompleted {
+  background-color: rgb(226, 226, 226);
+  opacity: 0.3;
+  color: black;
+}
+
+.list .item:hover {
+  border: 1px solid rgb(97, 97, 255);
+  cursor: pointer;
+}
+
+.completedList {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.completedList .itemWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.completedList .item {
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  margin-right: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 10px;
+}
+
+.completedList .itemCompleted {
+  background-color: rgb(226, 226, 226);
+  opacity: 0.3;
+  color: black;
+}
+
+.completedList .item:hover {
+  border: 1px solid rgb(97, 97, 255);
+  cursor: pointer;
+}
+
+.completedList .itemWrapper .deleteButton {
+  width: 60px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(255, 81, 203);
   color: white;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.completedList .itemWrapper .deleteButton:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.blogLink {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+@media only screen and (max-width: 500px) {
+  .App {
+    margin-top: 20px;
   }
 }
